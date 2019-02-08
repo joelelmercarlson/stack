@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# emacs.app
+set -euo pipefail
+
+ARGV=$*
+
+env|sort
+
+open "$HOME/.local/Emacs.app" $ARGV

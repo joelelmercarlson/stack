@@ -1,0 +1,18 @@
+{
+    "segments": [
+        "time"
+        , "cwd"
+        , "git"
+        , "jobs"
+        , "set_term_title"
+        , "read_only"
+        , "root"
+    ],
+    "mode": "patched",
+    "cwd": {
+        "mode": "plain"
+        , "max_depth": 4
+        , "max_dir_size": 32
+    },
+    "theme": "solarized_light"
+}
