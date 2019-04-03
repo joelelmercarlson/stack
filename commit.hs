@@ -1,5 +1,8 @@
 #!/usr/bin/env stack
--- stack script --system-ghc --resolver lts-12.22 --package "process" --package "time"
+{- stack --system-ghc --resolver lts-13.15 script
+--package "process"
+--package "time"
+-}
 module Main where
 
   import System.Environment
@@ -17,12 +20,13 @@ module Main where
 
     let cmd = "git commit -m \"" ++ fromMaybe (tt tm) (nth 1 xs) ++ "\""
 
-    run <- callCommand "git status"
+    run <- callCommand "git pull"
     run <- callCommand "git add ."
     run <- callCommand cmd
     run <- callCommand "git push"
     print run
 
+  -- | nth safe chooser
   nth :: Int -> [a] -> Maybe a
   nth _ []     = Nothing
   nth 1 (x:_)  = Just x
