@@ -36,16 +36,24 @@ cp $HOME/stack/dotfiles/xmonad/xmonad.hs         $XMONAD
 cp $HOME/stack/dotfiles/xmonad/xmonad-session-rc $XMONAD
 
 # spacemacs
-git clone https://github.com/syl20bnr/spacemacs $HOME/.emacs.d
+EMACS="$HOME/.emacs.d"
+if [ ! -d $EMACS ]
+then
+  git clone https://github.com/syl20bnr/spacemacs $EMACS
+fi
 
 # source code pro fonts
 ADOBEFONT="/tmp/adobefont"
+if [ -d $ADOBEFONT ]
+then
+  rm -fr $ADOBEFONT
+fi
+
 if [ ! -d $ADOBEFONT ]
 then
   mkdir $ADOBEFONT
 fi
 cd $ADOBEFONT
-
 cp $HOME/stack/adobefonts/1.017R.zip $ADOBEFONT
 unzip 1.017R.zip
 
@@ -56,23 +64,32 @@ then
 fi
 cp source-code-pro-1.017R/OTF/*.otf ~/.fonts/
 
-cd $HOME
 
 # font cache
 fc-cache -f -v
 
 # powerline
 cd $HOME
-git clone https://github.com/Lokaltog/powerline-fonts
-cd $HOME/powerline-fonts
+if [ ! -d powerline-fonts ]
+then
+  git clone https://github.com/Lokaltog/powerline-fonts
+fi
+cd powerline-fonts
 ./install.sh
 
 cd $HOME
-git clone https://github.com/milkbikis/powerline-shell
+if [ ! -d powerline-shell ]
+then
+  git clone https://github.com/milkbikis/powerline-shell
+fi
 cd powerline-shell
-#sudo yum install python-pip
-#sudo pip install setuptools
-sudo python setup.py install
+
+SITE="/usr/local/lib/python3.6/site-packages"
+if [ ! -d $SITE ]
+then
+  mkdir -p $SITE
+fi
+sudo python3 setup.py install
 
 cd $HOME
 echo "all done"
