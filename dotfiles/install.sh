@@ -84,10 +84,11 @@ then
 fi
 cd powerline-shell
 
-SITE="/usr/local/lib/python3.6/site-packages"
+VERSION=$(python3 --version|awk '{print $2}'|awk -F. '{print $1 "." $2}')
+SITE="/usr/local/lib/python${VERSION}/site-packages"
 if [ ! -d $SITE ]
 then
-  mkdir -p $SITE
+  sudo mkdir -p $SITE
 fi
 sudo python3 setup.py install
 
