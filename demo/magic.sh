@@ -11,9 +11,7 @@ SHOW_CMD_NUMS=true
 NO_WAIT=false
 C_NUM=0
 
-DEMO_PROMPT="\[\033[01;36;44m\][\u@\h \w]\[\033[00m\]\$ "
-
-# color reference
+# color
 BLACK="\033[0;30m"
 BLUE="\033[0;34m"
 GREEN="\033[0;32m"
@@ -22,7 +20,22 @@ RED="\033[0;31m"
 PURPLE="\033[0;35m"
 BROWN="\033[0;33m"
 WHITE="\033[1;37m"
-COLOR_RESET="\033[0m"
+RESET="\033[0m"
+
+# useful bash flags
+# \d date
+# \t 24-hour HH:MM:SS
+# \T 12-hr   HH:MM:SS
+# \u username
+# \h hostname
+# \H FQDN hostname
+# \! history num
+# \w basename $PWD
+# \W basename $PWD, $HOME is ~
+# \# command num
+# \$ effective uid
+
+DEMO_PROMPT="${GREEN}[\t]:${BLUE}\w${RESET}\$ "
 
 function wait() {
     if [[ "$PROMPT_TIMEOUT" = "0" ]]; then
