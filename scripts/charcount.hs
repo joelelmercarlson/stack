@@ -1,5 +1,5 @@
 #!/usr/bin/env stack
-{- stack --system-ghc --resolver lts-12.22 script -}
+{- stack --system-ghc --resolver lts-13.15 script -}
 module Main where
   import System.Environment
   import System.Exit
