@@ -1,0 +1,16 @@
+{
+    "list": [
+        {
+            "name": "Capability",
+            "description": "Capability",
+            "detail": {
+                "desc": "Notes",
+                "metric": "season"
+            },
+            "capexTally": [ 1.0 ],
+            "opexTally": [ 1.0 ],
+            "novelTally": [ 1.0 ],
+            "seasonTally": [ 1.0 ]
+        }
+    ]
+}
