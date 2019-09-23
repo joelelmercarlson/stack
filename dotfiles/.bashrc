@@ -1,4 +1,4 @@
-# stack/dotfiles/X/.bashrc
+# stack/dotfiles/.bashrc
 
 # Interactive?
 case $- in
@@ -22,6 +22,7 @@ shopt -s checkwinsize
 
 # User specific aliases and functions
 export PATH=$HOME/.local/bin:$PATH
+export GOPATH=$HOME/go
 export EDITOR=emacs
 export VISUAL=emacs
 export PAGER='less'
@@ -32,27 +33,6 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='grep --color=auto'
 alias egrep='grep --color=auto'
-
-# quick web functions
-function jweb() {
-  PORT=$1
-  PORT=${PORT:-8080}
-
-  ruby -run -e httpd . -p $PORT
-}
-export -f jweb
-
-# gem install awesome_print
-function jcurl() {
-  URL=$1
-  curl -s $URL | ruby -rawesome_print -rjson -e 'ap JSON.parse(STDIN.read)'
-}
-export -f jcurl
-
-function jprint() {
-  ruby -rawesome_print -rjson -e 'ap JSON.parse(STDIN.read)'
-}
-export -f jprint
 
 set -o vi
 
