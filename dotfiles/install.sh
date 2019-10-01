@@ -37,7 +37,7 @@ fi
 cp $HOME/stack/dotfiles/xmonad/xmonad.hs         $XMONAD
 cp $HOME/stack/dotfiles/xmonad/xmonad-session-rc $XMONAD
 
-if [ $SPACE -gt 10000000 ]
+if [ $SPACE -gt 1000000 ]
 then
     # spacemacs
     EMACS="$HOME/.emacs.d"
