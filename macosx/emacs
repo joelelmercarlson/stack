@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # emacs.app
 set -euo pipefail
+set -x
 
 ARGV=$*
 
