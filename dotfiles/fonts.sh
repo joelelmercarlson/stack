@@ -36,7 +36,4 @@ cd $HOME
 # font cache
 fc-cache -f -v
 
-# spacemacs
-git clone https://github.com/syl20bnr/spacemacs $HOME/.emacs.d
-
 echo "all done"
