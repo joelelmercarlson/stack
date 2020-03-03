@@ -8,7 +8,7 @@
 #
 set -ex
 
-cd $HOME
+#cd $HOME
 
 # ~/.local/bin
 mkdir -p $HOME/.local/bin
