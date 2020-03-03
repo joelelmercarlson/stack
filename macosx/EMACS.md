@@ -25,14 +25,3 @@ SourceCodePro-ExtraLight.otf	SourceCodePro-Semibold.otf
 SourceCodePro-Light.otf
 ```
 
-### add stack
-
-* add stack to the .local/bin
-https://www.stackage.org/stack/osx-x86_64
-
-```
-tar zxvf stack.tar.gz
-cp stack $HOME/.local/bin
-```
-
-
