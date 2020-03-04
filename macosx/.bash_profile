@@ -19,11 +19,11 @@ HISTFILESIZE=2000
 shopt -s checkwinsize
 
 # User specific aliases and functions
-export PATH=$HOME/.local/bin:$HOME/.local/go/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.local/homebrew/bin:$PATH
 export GOPATH=$HOME/go
 export EDITOR=emacs
 export VISUAL=emacs
-export PAGER='less'
+export PAGER=less
 
 alias ls='ls -FG'
 alias more='less'
