@@ -14,11 +14,19 @@ set -ex
 mkdir -p $HOME/.local/bin
 
 # dotfiles
-DOTFILES=".bash_profile .gitconfig .powerline-shell.json"
-for i in $DOTFILES
+XS=".bash_profile .gitconfig .powerline-shell.json"
+for i in $XS
 do
   echo $i
   cp $i $HOME/
+done
+
+# utilities
+XS="dock.sh emacs haskell.sh"
+for i in $XS
+do 
+  echo $i
+  cp $i $HOME/.local/bin
 done
 
 # spacemacs
