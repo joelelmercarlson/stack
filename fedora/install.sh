@@ -20,22 +20,12 @@ SPACE=$(df /home |awk '/\//{print $4}')
 mkdir -p $HOME/.local/bin
 
 # dotfiles
-DOTFILES=".bashrc .twmrc .xsession .Xdefaults .gitconfig .powerline-shell.json"
-for i in $DOTFILES
+XS=".bashrc .twmrc .xsession .Xdefaults .gitconfig .powerline-shell.json"
+for i in $XS
 do
     cp $i $HOME/
 done
 chmod a+x $HOME/.xsession
-
-# xmonad
-XMONAD="$HOME/.xmonad"
-if [ ! -d $XMONAD ]
-then
-    mkdir $XMONAD
-fi
-
-cp $HOME/stack/dotfiles/xmonad/xmonad.hs         $XMONAD
-cp $HOME/stack/dotfiles/xmonad/xmonad-session-rc $XMONAD
 
 if [ $SPACE -gt 1000000 ]
 then
