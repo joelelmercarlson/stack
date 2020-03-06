@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
-# emacs.app
+#
+# https://github.com/railwaycat/homebrew-emacsmacport
+#
+# brew tap railwaycat/emacsmacport
+# brew install emacs-mac
 ARGV=$*
-open "$HOME/.local/Emacs.app" $ARGV
+EMACS="$HOME/.local/homebrew/opt/emacs-mac/Emacs.app"
+
+open $EMACS $ARGV
