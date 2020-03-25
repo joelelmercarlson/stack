@@ -8,8 +8,6 @@
 #
 set -ex
 
-#cd $HOME
-
 # ~/.local/bin
 mkdir -p $HOME/.local/bin
 
@@ -22,7 +20,7 @@ do
 done
 
 # utilities
-XS="dock.sh emacs haskell.sh"
+XS="dock.sh emacs haskell.sh brew.sh"
 for i in $XS
 do 
   echo $i
