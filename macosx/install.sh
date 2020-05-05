@@ -15,22 +15,20 @@ mkdir -p $HOME/.local/bin
 XS=".bash_profile .gitconfig .powerline-shell.json"
 for i in $XS
 do
-  echo $i
   cp $i $HOME/
 done
 
 # utilities
 XS="dock.sh emacs haskell.sh brew.sh"
 for i in $XS
-do 
-  echo $i
+do
   cp $i $HOME/.local/bin
 done
 
 # spacemacs
-git clone https://github.com/syl20bnr/spacemacs $HOME/.emacs.d
+git clone --depth 1 https://github.com/syl20bnr/spacemacs $HOME/.emacs.d
 
-# TBD install emacs
+# TBD install emacs in ~/Applications/
 
 # source code pro fonts
 ADOBEFONT="/tmp/adobefont"
@@ -50,10 +48,11 @@ then
 fi
 cp source-code-pro-1.017R/OTF/*.otf ~/.fonts/
 
-# TBD install fonts in finder
+# TBD install fonts in ~/Library/Fonts/
 
 cd $HOME
-git clone https://github.com/milkbikis/powerline-shell
+git clone --depth 1 https://github.com/milkbikis/powerline-shell
+
 cd powerline-shell
 python setup.py install --user
 
