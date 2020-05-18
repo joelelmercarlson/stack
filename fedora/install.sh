@@ -8,11 +8,6 @@
 #
 set -ex
 
-# uname -v
-UBUNTU=$(uname -a|grep -i "Ubuntu"|wc -l)
-CENTOS=$(uname -a|grep -i "Centos"|wc -l)
-DEBIAN=$(uname -a|grep -i "Debian"|wc -l)
-
 # SPACE
 SPACE=$(df /home |awk '/\//{print $4}')
 
@@ -20,12 +15,11 @@ SPACE=$(df /home |awk '/\//{print $4}')
 mkdir -p $HOME/.local/bin
 
 # dotfiles
-XS=".bashrc .twmrc .xsession .Xdefaults .gitconfig .powerline-shell.json"
+XS=".bashrc .gitconfig .powerline-shell.json"
 for i in $XS
 do
     cp $i $HOME/
 done
-chmod a+x $HOME/.xsession
 
 if [ $SPACE -gt 1000000 ]
 then
@@ -70,7 +64,6 @@ then
     cd powerline-fonts
     ./install.sh
 fi
-
 
 cd $HOME
 if [ ! -d powerline-shell ]
