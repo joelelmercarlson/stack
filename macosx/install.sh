@@ -5,12 +5,15 @@
 # Requires: git
 #
 # Starship: https://starship.rs
-# Fonts:    https://github.com/adobe-fonts/source-code-pro/archive/1.017R.zip
+# Fonts:    https://github.com/powerline/fonts
 #
 set -ex
 
 # ~/.local/bin
 mkdir -p $HOME/.local/bin
+
+# starship
+brew install starship
 
 # dotfiles
 XS=".bash_profile .gitconfig"
@@ -28,27 +31,13 @@ done
 
 # spacemacs
 # TBD install emacs in ~/Applications/
-git clone --depth 1 https://github.com/syl20bnr/spacemacs $HOME/.emacs.d
+git clone --depth=1 https://github.com/syl20bnr/spacemacs $HOME/.emacs.d
 
-
-# source code pro fonts
-# TBD install fonts in ~/Library/Fonts/
-ADOBEFONT="/tmp/adobefont"
-if [ ! -d $ADOBEFONT ]
-then
-  mkdir $ADOBEFONT
-fi
-cd $ADOBEFONT
-
-cp $HOME/stack/adobefonts/1.017R.zip $ADOBEFONT
-unzip 1.017R.zip
-
-FONTS="$HOME/.fonts"
-if [ ! -d $FONTS ]
-then
-  mkdir $FONTS
-fi
-cp source-code-pro-1.017R/OTF/*.otf ~/.fonts/
+# powerline fonts for FiraCode mono
+cd $HOME
+git clone --depth=1 https://github.com/powerline/fonts
+cd fonts
+./install.sh
 
 cd $HOME
 echo "all done"
