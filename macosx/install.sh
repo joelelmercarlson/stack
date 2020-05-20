@@ -30,11 +30,10 @@ done
 brew install starship
 
 # spacemacs
-# TBD install emacs in ~/Applications/
 git clone --depth=1 https://github.com/syl20bnr/spacemacs $HOME/.emacs.d
 
-# powerline fonts for FiraCode mono
-cd $HOME
+# powerline fonts
+cd /tmp
 git clone --depth=1 https://github.com/powerline/fonts
 cd fonts
 ./install.sh
