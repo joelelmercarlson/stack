@@ -34,14 +34,6 @@ alias egrep='grep --color=auto'
 
 set -o vi
 
-# https://github.com/milkbikis/powerline-shell
-function _update_ps1() {
-  PS1="$($HOME/Library/Python/2.7/bin/powerline-shell $?)"
-}
+# brew install starship
+eval "$(starship init bash)"
 
-if [ "$TERM" != "linux" ]
-then
-  PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-else
-  PS1="\[\033[01;36;44m\][\u@\h \w]\[\033[00m\]\$ "
-fi

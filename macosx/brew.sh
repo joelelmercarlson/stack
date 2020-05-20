@@ -15,6 +15,7 @@ echo "ctrl-c if you don't want brew to start installs..."
 brew update
 
 ## languages and tools
+brew install starship
 brew install python3
 brew install git
 
