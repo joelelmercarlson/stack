@@ -12,11 +12,8 @@ set -ex
 # ~/.local/bin
 mkdir -p $HOME/.local/bin
 
-# starship
-brew install starship
-
 # dotfiles
-XS=".bash_profile .gitconfig"
+XS=".bash_profile .gitconfig .spacemacs"
 for i in $XS
 do
   cp $i $HOME/
@@ -28,6 +25,9 @@ for i in $XS
 do
   cp $i $HOME/.local/bin
 done
+
+# starship
+brew install starship
 
 # spacemacs
 # TBD install emacs in ~/Applications/
