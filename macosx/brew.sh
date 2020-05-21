@@ -16,6 +16,7 @@ brew update
 ## languages and tools
 brew install starship
 brew install python3
+brew install pyenv
 brew install git
 
 ## install emacs https://github.com/railwaycat/homebrew-emacsmacport
