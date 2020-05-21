@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 
-# .local
-mkdir -p ~/.local
-cd ~/.local
+# .local for homebrew
+cd $HOME
+mkdir -p $HOME/.local
 
 ## brew
-mkdir homebrew
-curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
+curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip=1 -C .local
 
 ## warn
 echo "ctrl-c if you don't want brew to start installs..."

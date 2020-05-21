@@ -5,6 +5,6 @@
 # brew tap railwaycat/emacsmacport
 # brew install emacs-mac
 ARGV=$*
-EMACS="$HOME/.local/homebrew/opt/emacs-mac/Emacs.app"
+EMACS="$HOME/.local/opt/emacs-mac/Emacs.app"
 
 open $EMACS $ARGV
