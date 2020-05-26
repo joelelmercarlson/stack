@@ -36,20 +36,4 @@ alias egrep='grep --color=auto'
 
 set -o vi
 
-# https://github.com/milkbikis/powerline-shell
-# https://github.com/Lokaltog/powerline-fonts/
-function _update_ps1() {
-  PS1="$(powerline-shell $?)"
-}
-
-if [ "$TERM" != "linux" ]
-then
-  PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-else
-  PS1="\[\033[01;36;44m\][\u@\h \w]\[\033[00m\]\$ "
-fi
-
-if [ "$IN_NIX_SHELL" ]
-then
-  unset PROMPT_COMMAND
-fi
+eval "$(starship init bash)"
