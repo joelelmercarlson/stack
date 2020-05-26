@@ -16,45 +16,36 @@ mkdir -p $HOME/.local/bin
 
 # dotfiles
 XS=".bashrc .gitconfig"
-for i in $XS
-do
+for i in $XS; do
     cp $i $HOME/
 done
 
-if [ $SPACE -gt 1000000 ]
-then
-    # spacemacs
+# spacemacs
+if [ $SPACE -gt 1000000 ]; then
     EMACS="$HOME/.emacs.d"
-    if [ ! -d $EMACS ]
-    then
+    if [ ! -d $EMACS ]; then
         git clone https://github.com/syl20bnr/spacemacs $EMACS
     fi
-
-    # source code pro fonts
-    ADOBEFONT="/tmp/adobefont"
-    if [ -d $ADOBEFONT ]
-    then
-        rm -fr $ADOBEFONT
-    fi
-
-    if [ ! -d $ADOBEFONT ]
-    then
-        mkdir $ADOBEFONT
-    fi
-    cd $ADOBEFONT
-        cp $HOME/stack/adobefonts/1.017R.zip $ADOBEFONT
-        unzip 1.017R.zip
-
-    FONTS="$HOME/.fonts"
-    if [ ! -d $FONTS ]
-    then
-        mkdir $FONTS
-    fi
-    cp source-code-pro-1.017R/OTF/*.otf ~/.fonts/
-
-    # font cache
-    fc-cache -f -v
 fi
+
+#source code pro
+ADOBEFONT="/tmp/adobefont"
+if [ -d $ADOBEFONT ]; then
+    rm -fr $ADOBEFONT
+fi
+
+if [ ! -d $ADOBEFONT ]; then
+    mkdir $ADOBEFONT
+fi
+cd $ADOBEFONT
+cp $HOME/stack/adobefonts/1.017R.zip $ADOBEFONT
+unzip 1.017R.zip
+
+FONTS="$HOME/.local/share/fonts"
+if [ ! -d $FONTS ]; then
+    mkdir $FONTS
+fi
+cp source-code-pro-1.017R/OTF/*.otf $FONTS
 
 # starship.rs
 cd $HOME
