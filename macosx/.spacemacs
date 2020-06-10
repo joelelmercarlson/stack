@@ -316,7 +316,7 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (setq org-babel-python-command 'python3)
+  (setq org-babel-python-command "python3")
   (org-babel-do-load-languages
    'org-babel-load-languages
    '((python . t)))
