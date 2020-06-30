@@ -34,11 +34,10 @@ alias egrep='grep --color=auto'
 
 set -o vi
 
-# pyenv
+# brew install pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
     eval "$(pyenv init -)"
 fi
 
 # brew install starship
 eval "$(starship init bash)"
-
