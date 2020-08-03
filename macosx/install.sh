@@ -5,6 +5,7 @@
 # Requires: git
 #
 # Starship: https://starship.rs
+# Pyenv:    https://github.com/pyenv/pyenv
 # Fonts:    https://github.com/powerline/fonts
 #
 set -ex
@@ -30,6 +31,9 @@ done
 
 # starship
 brew install starship
+
+# pyenv
+brew install pyenv
 
 # spacemacs
 git clone --depth=1 https://github.com/syl20bnr/spacemacs $HOME/.emacs.d
