@@ -30,7 +30,7 @@ done
 
 echo "Software..."
 #
-# starship and pyenv are in .zshrc
+# starship, pyenv and emacs are in .zshrc
 #
 # starship, pyenv, spacemacs
 brew install starship
