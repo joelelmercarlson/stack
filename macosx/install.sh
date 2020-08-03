@@ -13,8 +13,7 @@ set -ex
 # ~/.local/bin
 mkdir -p $HOME/.local/bin
 
-# dotfiles
-#
+echo "dotfiles..."
 # macOS 10.15 Catalina zsh
 XS=".zshrc .zshenv .gitconfig .spacemacs"
 for i in $XS
@@ -22,22 +21,23 @@ do
   cp $i $HOME/
 done
 
-# utilities
+echo "scripts...."
 XS="dock.sh emacs haskell.sh brew.sh"
 for i in $XS
 do
   cp $i $HOME/.local/bin
 done
 
-# starship
+echo "Software..."
+#
+# starship and pyenv are in .zshrc
+#
+# starship, pyenv, spacemacs
 brew install starship
-
-# pyenv
 brew install pyenv
-
-# spacemacs
 git clone --depth=1 https://github.com/syl20bnr/spacemacs $HOME/.emacs.d
 
+echo "Fonts...."
 # powerline fonts
 cd /tmp
 git clone --depth=1 https://github.com/powerline/fonts
