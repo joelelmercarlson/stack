@@ -2,4 +2,6 @@
 [user]
 # Please adapt and uncomment the following lines:
 	name = Joel E Carlson
-	email = joel.elmer.carlson@gmail.com
+	email = joel_carlson@optum.com
+[pull]
+	rebase = false
