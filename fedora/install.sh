@@ -52,7 +52,7 @@ cd $HOME
 curl -fsSL https://starship.rs/install.sh | bash
 
 # pyenv
-git clone --depth=1 https://github.com/pyenv/pyenv ~/.pyenv
+git clone --depth=1 https://github.com/pyenv/pyenv.git ~/.pyenv
 
 
 # powerline fonts
