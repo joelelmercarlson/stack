@@ -51,6 +51,10 @@ cp source-code-pro-1.017R/OTF/*.otf $FONTS
 cd $HOME
 curl -fsSL https://starship.rs/install.sh | bash
 
+# pyenv
+git clone --depth=1 https://github.com/pyenv/pyenv ~/.pyenv
+
+
 # powerline fonts
 cd /tmp
 git clone --depth=1 https://github.com/powerline/fonts
