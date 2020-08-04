@@ -1,7 +1,12 @@
 # stack Setup
 
-### spacemacs and haskell
+## Operating Systems
 
-* [spacemacs](https://github.com/syl20bnr/spacemacs/)
-* [haskell](http://www.haskell.org/)
-* [stack](https://github.com/commercialhaskell/stack/)
+- [fedora](fedora/install.sh)
+- [macos](macos/install.sh)
+
+## spacemacs and haskell
+
+- [spacemacs](https://github.com/syl20bnr/spacemacs/)
+- [haskell](http://www.haskell.org/)
+- [stack](https://github.com/commercialhaskell/stack/)
