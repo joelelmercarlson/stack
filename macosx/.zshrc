@@ -5,10 +5,10 @@ setopt APPEND_HISTORY
 setopt HIST_IGNORE_SPACE
 setopt HIST_NO_STORE
 setopt HIST_NO_FUNCTIONS
-HISTFILE="$HOME/.zsh_history"
-HISTSIZE=2048
-HISTFILESIZE=4096
-SAVEHIST=$HITSIZE
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=2048
+export HISTFILESIZE=4096
+export SAVEHIST="$HISTSIZE"
 
 alias ls='ls -FG'
 alias more='less'
