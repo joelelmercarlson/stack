@@ -10,12 +10,12 @@ export HISTSIZE=2048
 export HISTFILESIZE=4096
 export SAVEHIST="$HISTSIZE"
 
-alias ls='ls -FG'
-alias more='less'
-alias less='less -csM'
-alias grep='grep --color=auto'
-alias fgrep='grep --color=auto'
-alias egrep='grep --color=auto'
+alias ls="ls -FG"
+alias more="less"
+alias less="less -csM"
+alias grep="grep --color=auto"
+alias fgrep="grep --color=auto"
+alias egrep="grep --color=auto"
 alias make='gmake'
 
 set -o vi
