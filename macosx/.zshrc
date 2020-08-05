@@ -5,7 +5,7 @@ setopt APPEND_HISTORY
 setopt HIST_IGNORE_SPACE
 setopt HIST_NO_STORE
 setopt HIST_NO_FUNCTIONS
-HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
+HISTFILE="$HOME/.zsh_history"
 HISTSIZE=2048
 HISTFILESIZE=4096
 SAVEHIST=$HITSIZE
@@ -16,10 +16,11 @@ alias less='less -csM'
 alias grep='grep --color=auto'
 alias fgrep='grep --color=auto'
 alias egrep='grep --color=auto'
+alias make='gmake'
 
 set -o vi
 
-# homebrew versions
+# homebrew code
 PATH="$HOME/.local/bin:$PATH"
 export PATH
 
