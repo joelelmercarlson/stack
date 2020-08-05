@@ -15,7 +15,7 @@ SPACE=$(df /home |awk '/\//{print $4}')
 mkdir -p $HOME/.local/bin
 
 # dotfiles
-XS=".bashrc .zshrc .zshenv .gitconfig"
+XS=".zshrc .zshenv .gitconfig"
 for i in $XS; do
     cp $i $HOME/
 done
