@@ -22,7 +22,7 @@ do
 done
 
 echo "scripts...."
-XS="dock.sh emacs haskell.sh brew.sh"
+XS="dock.sh emacs brew.sh"
 for i in $XS
 do
   cp $i $HOME/.local/bin
