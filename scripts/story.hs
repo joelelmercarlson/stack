@@ -1,5 +1,5 @@
 #!/usr/bin/env stack
-{- stack --system-ghc --resolver lts-13.15 script
+{- stack --system-ghc --resolver lts-16.8 script
 --package "containers"
 --package "mtl"
 --package "parsec"
@@ -22,9 +22,7 @@ module Main where
 
   main :: IO ()
   main = do
-    makeStory "negative.txt"
-    makeStory "positive.txt"
-    makeStory "better.txt"
+    makeStory "story.txt"
 
   display :: Story -> IO ()
   display m = do

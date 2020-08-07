@@ -1,5 +1,5 @@
 #!/usr/bin/env stack
-{- stack --system-ghc --resolver lts-13.15 script
+{- stack --system-ghc --resolver lts-16.8 script
 --package "bytestring"
 --package "cassava"
 --package "text"
