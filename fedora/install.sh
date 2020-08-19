@@ -61,5 +61,8 @@ git clone --depth=1 https://github.com/powerline/fonts
 cd fonts
 ./install.sh
 
+# zsh
+sudo dnf -y install zsh
+
 cd $HOME
 echo "all done"
