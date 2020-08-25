@@ -8,7 +8,6 @@
 #
 set -ex
 
-cd $HOME
 
 echo "dotfiles..."
 # ~/.local/bin
