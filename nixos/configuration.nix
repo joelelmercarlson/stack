@@ -45,7 +45,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
    environment.systemPackages = with pkgs; [
-     wget vim git zsh curl
+     wget vim git zsh curl python3
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -61,6 +61,9 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+
+  # Enable vmware guest
+  virtualisation.vmware.guest.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -88,12 +91,16 @@
   # services.xserver.desktopManager.plasma5.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-   programs.zsh.enable = true; 
-   users.users.loki = {
-     isNormalUser = true;
-     shell = pkgs.zsh;
-     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-   };
+  programs.zsh.enable = true; 
+  users.users.loki = {
+    isNormalUser = true;
+    shell = pkgs.zsh;
+    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+  };
+  security.sudo.enable = true;
+  security.sudo.extraConfig = ''
+    %wheel ALL=(root) NOPASSWD: ALL
+  '';
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
