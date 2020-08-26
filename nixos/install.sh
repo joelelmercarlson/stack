@@ -14,7 +14,7 @@ echo "dotfiles..."
 mkdir -p $HOME/.local/bin
 
 # dotfiles
-XS=".zshrc .zshenv .gitconfig .xsession"
+XS=".zshrc .zshenv .gitconfig"
 for i in $XS; do
     cp $i $HOME/
 done
