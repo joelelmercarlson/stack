@@ -45,7 +45,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
    environment.systemPackages = with pkgs; [
-     wget vim git zsh curl python3
+     wget vim git zsh curl python3 xterm
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -79,8 +79,8 @@
   # hardware.pulseaudio.enable = true;
 
   # Enable the X11 windowing system.
-  # services.xserver.enable = true;
-  # services.xserver.layout = "us";
+  services.xserver.enable = true;
+  services.xserver.layout = "us";
   # services.xserver.xkbOptions = "eurosign:e";
 
   # Enable touchpad support.
