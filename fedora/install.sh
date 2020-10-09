@@ -28,41 +28,12 @@ if [ $SPACE -gt 1000000 ]; then
     fi
 fi
 
-#source code pro
-ADOBEFONT="/tmp/adobefont"
-if [ -d $ADOBEFONT ]; then
-    rm -fr $ADOBEFONT
-fi
-
-if [ ! -d $ADOBEFONT ]; then
-    mkdir $ADOBEFONT
-fi
-cd $ADOBEFONT
-cp $HOME/stack/adobefonts/1.017R.zip $ADOBEFONT
-unzip 1.017R.zip
-
-FONTS="$HOME/.local/share/fonts"
-if [ ! -d $FONTS ]; then
-    mkdir $FONTS
-fi
-cp source-code-pro-1.017R/OTF/*.otf $FONTS
-
 # starship.rs
 cd $HOME
 curl -fsSL https://starship.rs/install.sh | bash
 
 # pyenv
 git clone --depth=1 https://github.com/pyenv/pyenv.git ~/.pyenv
-
-
-# powerline fonts
-cd /tmp
-git clone --depth=1 https://github.com/powerline/fonts
-cd fonts
-./install.sh
-
-# zsh
-sudo dnf -y install zsh
 
 cd $HOME
 echo "all done"
