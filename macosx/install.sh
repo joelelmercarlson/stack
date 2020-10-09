@@ -14,7 +14,6 @@ set -ex
 mkdir -p $HOME/.local/bin
 
 echo "dotfiles..."
-# macOS 10.15 Catalina zsh
 XS=".zshrc .zshenv .gitconfig .spacemacs"
 for i in $XS
 do

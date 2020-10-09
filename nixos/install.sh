@@ -3,11 +3,7 @@
 # setup environment
 #
 # Requires: git
-# Utilizes fonts from powerline and adobe
-#   https://github.com/adobe-fonts/source-code-pro/archive/1.017R.zip
-#
 set -ex
-
 
 echo "dotfiles..."
 # ~/.local/bin
@@ -20,7 +16,6 @@ for i in $XS; do
 done
 
 echo "software..."
-
 # stack for nix
 mkdir $HOME/.stack
 cp config.yaml $HOME/.stack
