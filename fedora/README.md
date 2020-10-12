@@ -1,8 +1,12 @@
-# fedora
+# Red Hat Enterprise Linux / Centos / fedora
 
-* install.sh
-* colors.sh
-* haskell.sh
+## Run the scripts in order
 
-My environment to set up powerline-shell, powerline-fonts, Source Code fonts
-spacemacs.
+```
+install.sh
+fonts.sh
+haskell.sh
+colors.sh
+```
+
+My environment to set up powerline-fonts, starship.rs, and spacemacs.

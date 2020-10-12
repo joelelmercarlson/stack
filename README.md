@@ -4,6 +4,7 @@
 
 - [fedora](fedora/install.sh)
 - [macos](macos/install.sh)
+- [nixos](nixos/install.sh)
 
 ## spacemacs and haskell
 
