@@ -1,0 +1,6 @@
+#
+# For more information about stack's configuration, see
+# http://docs.haskellstack.org/en/stable/yaml_configuration/
+#
+packages: []
+resolver: lts-16.18
