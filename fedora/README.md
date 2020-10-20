@@ -5,6 +5,7 @@
 ```
 install.sh
 fonts.sh
+graphical.sh
 haskell.sh
 colors.sh
 ```
