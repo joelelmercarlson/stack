@@ -1,13 +1,16 @@
 #!/usr/bin/env stack
-{- stack script
---system-ghc
---resolver lts-16.18
+{- stack --system-ghc 
+--resolver lts-16.20 script
 --package "process"
 --package "time"
 -}
 module Main where
+
   import System.Environment
-  import System.Process
+  import System.Exit
+  import System.IO
+  import System.Process 
+
   import Data.Maybe
   import Data.Time.Clock.POSIX
 
@@ -31,4 +34,4 @@ module Main where
   nth n (x:xs) = nth (n - 1) xs
 
   tt :: Integer -> String
-  tt n = "+ " ++ show n
+  tt n = "+ " ++ show n 
