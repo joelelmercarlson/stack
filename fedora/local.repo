@@ -2,7 +2,7 @@
 
 name=Local AppStream
 enabled=1
-gpgcheck=no
+gpgcheck=1
 baseurl=file:///REPO/AppStream
 gpgpkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
 
@@ -10,6 +10,6 @@ gpgpkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
 
 name=Local BaseOS
 enabled=1
-gpgcheck=no
+gpgcheck=1
 baseurl=file:///REPO/BaseOS
 gpgpkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
