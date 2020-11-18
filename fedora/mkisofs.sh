@@ -21,7 +21,7 @@ cp $REPOCFG $EXPORT
 
 echo "inst.stage2 LABEL..."
 cd $EXPORT
-LABEL=$(awk '/inst.stage2/{print $3}' $ISOCFG|sed 's/.*=//'|sort -u)
+LABEL=$(awk '/inst.stage2/{print $3}' $ISOCFG|sed 's/.*=//'|head -n 1)
 LOWER=$(echo $LABEL|tr '[A-Z]' '[a-z]')
 ISO="${LOWER}.iso"
 
@@ -39,6 +39,6 @@ mkisofs -o $EXPORT/$ISO \
 -no-emul-boot -boot-load-size 4 -boot-info-table \
 -eltorito-alt-boot \
 -e images/efiboot.img -no-emul-boot -graft-points \
--V $LABEL .
+-V "$LABEL" .
 
 echo "all done..."
