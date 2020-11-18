@@ -22,7 +22,8 @@ cp $REPOCFG $EXPORT
 echo "inst.stage2 LABEL..."
 cd $EXPORT
 LABEL=$(awk '/inst.stage2/{print $3}' $ISOCFG|sed 's/.*=//'|head -n 1)
-LOWER=$(echo $LABEL|tr '[A-Z]' '[a-z]')
+RELEASE=$(awk '/inst.stage2/{print $3}' $ISOCFG|sed 's/.*=//'|tail -n 1)
+LOWER=$(echo $RELEASE|tr '[A-Z]' '[a-z]')
 ISO="${LOWER}.iso"
 
 CNT=$(echo $LABEL|wc -l)
