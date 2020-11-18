@@ -33,7 +33,7 @@ then
 fi
 
 echo "make the ${ISO}..."
-mkisofs -o $ISO \
+mkisofs -o $EXPORT/$ISO \
 -b isolinux/isolinux.bin -J -R -l \
 -c isolinux/boot.cat \
 -no-emul-boot -boot-load-size 4 -boot-info-table \
