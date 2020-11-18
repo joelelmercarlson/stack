@@ -26,8 +26,7 @@ LOWER=$(echo $LABEL|tr '[A-Z]' '[a-z]')
 ISO="${LOWER}.iso"
 
 CNT=$(echo $LABEL|wc -l)
-
-if [ $CNT -lt 2 ]
+if [ $CNT -lt 1 ]
 then
 	echo "LABEL missing..."
 	exit 1
