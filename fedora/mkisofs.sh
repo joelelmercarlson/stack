@@ -40,8 +40,8 @@ fi
 
 echo "mkisofs ${ISO}..."
 mkisofs -o $ISO \
--b isolinux/isolinux.bin -J -R -l \
--c isolinux/boot.cat \
+-b $EXPORT/isolinux/isolinux.bin -J -R -l \
+-c $EXPORT/isolinux/boot.cat \
 -no-emul-boot -boot-load-size 4 -boot-info-table \
 -eltorito-alt-boot \
 -e images/efiboot.img -no-emul-boot -graft-points \
