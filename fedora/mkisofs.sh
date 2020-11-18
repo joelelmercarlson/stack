@@ -39,6 +39,7 @@ then
 fi
 
 echo "mkisofs ${ISO}..."
+cd $EXPORT
 mkisofs -o $ISO \
 -b $EXPORT/isolinux/isolinux.bin -J -R -l \
 -c $EXPORT/isolinux/boot.cat \
