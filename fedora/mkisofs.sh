@@ -41,11 +41,11 @@ fi
 echo "mkisofs ${ISO}..."
 cd $EXPORT
 mkisofs -o $ISO \
--b $EXPORT/isolinux/isolinux.bin -J -R -l \
--c $EXPORT/isolinux/boot.cat \
+-b isolinux/isolinux.bin -J -R -l \
+-c isolinux/boot.cat \
 -no-emul-boot -boot-load-size 4 -boot-info-table \
 -eltorito-alt-boot \
--e $EXPORT/images/efiboot.img -no-emul-boot -graft-points \
+-e images/efiboot.img -no-emul-boot -graft-points \
 -V "$LABEL" .
 
 echo "all done..."
