@@ -27,7 +27,7 @@ ISO="${LOWER}.iso"
 
 CNT=$(echo $LABEL|wc -l)
 
-if [ $CNT -lt 1 ]
+if [ $CNT -lt 2 ]
 then
 	echo "LABEL missing..."
 	exit 1
