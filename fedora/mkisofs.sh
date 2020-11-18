@@ -21,9 +21,10 @@ cp $REPOCFG $EXPORT
 
 echo "inst.stage2 LABEL..."
 cd $EXPORT
-LABEL=$(awk '/inst.stage2/{print $3}' isolinux.cfg|sed 's/.*=//'|sort -u)
+LABEL=$(awk '/inst.stage2/{print $3}' $ISOCFG|sed 's/.*=//'|sort -u)
 LOWER=$(echo $LABEL|tr '[A-Z]' '[a-z]')
-ISO="${LABEL}.iso"
+ISO="${LOWER}.iso"
+
 CNT=$(echo $LABEL|wc -l)
 
 if [ $CNT -lt 1 ]
