@@ -1,9 +1,10 @@
 #!/usr/bin/env stack
-{- stack --system-ghc --resolver lts-16.18 script
+{- stack --system-ghc --resolver lts-16.20 script
 --package "bytestring"
 --package "cassava"
 --package "text"
---package "vector" -}
+--package "vector"
+-}
 {-# LANGUAGE OverloadedStrings #-}
 module Main where
   import System.Environment
