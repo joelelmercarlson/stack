@@ -22,8 +22,10 @@ echo "inst.stage2 iso LABEL..."
 LABEL=$(awk '/inst.stage2/{print $3}' $ISOCFG|sed 's/.*=//'|head -n 1)
 RELEASE=$(awk '/inst.stage2/{print $3}' $ISOCFG|sed 's/.*=//'|tail -n 1)
 LOWER=$(echo $RELEASE|tr '[A-Z]' '[a-z]')
-ISO="/export/${LOWER}.iso"
+VERSION=$(date +%Y.%m.%d)
+ISO="/export/${LOWER}-v${VERSION}.iso"
 
+# Sanity Checks
 CNT=$(echo $LABEL|wc -l)
 if [ $CNT -lt 1 ]
 then
@@ -35,6 +37,13 @@ CNT=$(echo $RELEASE|wc -l)
 if [ $CNT -lt 1 ]
 then
 	  echo "RELEASE missing..."
+	  exit 1
+fi
+
+CNT=$(echo $VERSION|wc -l)
+if [ $CNT -lt 1 ]
+then
+	  echo "VERSION missing..."
 	  exit 1
 fi
 
