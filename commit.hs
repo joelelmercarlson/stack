@@ -20,13 +20,11 @@ module Main where
     let cmd = "git commit -m \"" ++ fromMaybe (tt tm) (nth 1 xs) ++ "\""
 
     a <- callCommand "git pull"
-    b <- callCommand "git add ."
-    c <- callCommand cmd
-    d <- callCommand "git push"
+    _ <- callCommand "git add ."
+    _ <- callCommand cmd
+    b <- callCommand "git push"
     print $ a
     print $ b
-    print $ c
-    print $ d
 
   -- | nth safe chooser
   nth :: Int -> [a] -> Maybe a
