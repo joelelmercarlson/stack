@@ -1,11 +1,9 @@
-# MacOS
+# nixos
 
 ## Run the scripts in order
 
 ```
 install.sh
-dock.sh
-brew.sh
 haskell.sh
 ```
 

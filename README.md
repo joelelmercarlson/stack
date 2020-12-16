@@ -3,9 +3,9 @@ stack setup for various Operating Systems.
 
 ## Operating Systems
 
-- [fedora](fedora/install.sh)
-- [macos](macos/install.sh)
-- [nixos](nixos/install.sh)
+- [fedora](fedora/README.md)
+- [macos](macos/README.md)
+- [nixos](nixos/README.md)
 
 ## spacemacs, haskell and stackage
 
