@@ -1,15 +1,13 @@
 #!/usr/bin/env stack
-{- stack --system-ghc 
---resolver lts-16.25 script
---package "process"
---package "time"
+{- stack --system-ghc
+--resolver lts-16.26 script
+--package process
+--package time
 -}
 module Main where
 
   import System.Environment
-  import System.Exit
-  import System.IO
-  import System.Process 
+  import System.Process
 
   import Data.Maybe
   import Data.Time.Clock.POSIX
@@ -21,17 +19,20 @@ module Main where
 
     let cmd = "git commit -m \"" ++ fromMaybe (tt tm) (nth 1 xs) ++ "\""
 
-    run <- callCommand "git pull"
-    run <- callCommand "git add ."
-    run <- callCommand cmd
-    run <- callCommand "git push"
-    print run
+    a <- callCommand "git pull"
+    b <- callCommand "git add ."
+    c <- callCommand cmd
+    d <- callCommand "git push"
+    print $ a
+    print $ b
+    print $ c
+    print $ d
 
   -- | nth safe chooser
   nth :: Int -> [a] -> Maybe a
   nth _ []     = Nothing
   nth 1 (x:_)  = Just x
-  nth n (x:xs) = nth (n - 1) xs
+  nth n (_:xs) = nth (n - 1) xs
 
   tt :: Integer -> String
-  tt n = "+ " ++ show n 
+  tt n = "+ " ++ show n

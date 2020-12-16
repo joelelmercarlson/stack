@@ -3,4 +3,4 @@
 # http://docs.haskellstack.org/en/stable/yaml_configuration/
 #
 packages: []
-resolver: lts-16.25
+resolver: lts-16.26
