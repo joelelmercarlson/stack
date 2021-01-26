@@ -1,6 +1,6 @@
 #!/usr/bin/env stack
 {- stack --system-ghc
---resolver lts-16.27 script
+--resolver lts-17.0 script
 --package process
 --package time
 -}
